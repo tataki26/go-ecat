@@ -11,15 +11,19 @@
 
     <br>
 
-    <strong>ErrorCode</strong>: {{.ErrorCode}}<br>
     <strong>Count</strong>: {{.Count}}<br>
+    <strong>Error Code</strong>: {{.ErrorCode}}<br>
 
     <br>
 
-    <strong>{{.Name}}</strong><br>
-    - Product Name:     {{.Info.ProductName}}<br>
+    <h1>CiA {{.ProfileNo}}</h1><br>
+    {{range .DeviceList}}
+    {{.Name}} - {{.Info.ProductName}}<br>
+    {{.Info.VendorName}}<br>
     - Product Code:     {{.Info.ProductCode}}<br>
-    - Revision Number:  {{.Info.RevisionNo}}<br>
+    - Revision No:  {{.Info.RevisionNo}}<br>
     - Vendor ID:        {{.Info.VendorId}}<br>
+    <br>
+    {{end}}
 </body>
 </html>
